@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amazing Events</title>
+
+    <!-- Browser ICONs-->
+    <link rel="icon" href="/assets/img/logo_amazing_events.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/assets/img/logo_amazing_events.ico" type="image/x-icon">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <!-- Bootstrap JS-->
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom CSS files -->
+    <link rel="stylesheet" href="./assets/styles/custom.css" />
+    <!-- FontAwesome JS -->
+    <script defer src="https://kit.fontawesome.com/80cdb2cc5c.js" crossorigin="anonymous"></script>
+    <!-- Custom JS files -->
+    <script defer type="module" src="./assets/js/index.js"></script>
+</head>
+
+<body class="bg-light">
+    <!-- here starts the nav menu -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+                <img class="nav-logo" src="./assets/img/logo_amazing_events.ico" alt="amazing-events-logo" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse nav-right" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./upcoming-events.html">Upcoming Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./past-events.html">Past Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./stats.html">Stats</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- here finish nav menu -->
+
+    <!-- here start carrousel -->
+    <header>
+        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="10000">
+                    <img src="./assets/img/banner1.jpg" class="bd-placeholder-img bd-placeholder-img-lg d-block w-100"
+                        width="800" height="400" alt="first-banner">
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="./assets/img/banner2.jpg" class="bd-placeholder-img bd-placeholder-img-lg d-block w-100"
+                        width="800" height="400" alt="first-banner">
+
+                </div>
+                <div class="carousel-item">
+                    <img src="./assets/img/forest.jpg" class="bd-placeholder-img bd-placeholder-img-lg d-block w-100"
+                        width="800" height="400" alt="first-banner">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </header>
+    <!-- here finish carrousel -->
+
+    <main>
+        <!-- here start search bar -->
+        <div class="container col">
+            <form class="d-flex mt-3">
+                <input id="searchbox" class="form-control me-2" type="search"
+                    placeholder="Write the event that you are searching..." aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">
+                    <em class="fa-solid fa-magnifying-glass"></em>
+                </button>
+            </form>
+        </div>
+        <!-- here end search bar -->
+
+        <!-- here goes the categories filter created dinamically-->
+        <div class="container col mt-3">
+            <div class="row d-flex">
+                <div id="container-categories"></div>
+            </div>
+        </div>
+        <!-- here ends the filter-->
+
+        <!-- here start cards list -->
+        <section class="py-4 ">
+            <div class="container">
+                <!-- card title -->
+                <div class="col-12">
+                    <h2 class="mb-3 text-danger">Home Events</h2>
+                </div>
+                <!-- here finish card title-->
+                <!-- here goes the cards created dinamically -->
+                <form action="details.html" method="get">
+                    <div id="container-cards" class="row">
+                        <div class="col-md-6 col-lg-4 mb-4"></div>
+                    </div>
+                </form>
+                <!-- here finish the created cards dinamically -->
+        </section>
+        <!-- here ends cards list-->
+    </main>
+    <!-- here start page footer -->
+    <footer class="bg-dark text-white btn-outline-light">
+        <!-- Section: Social media -->
+        <section class="d-flex justify-content-between p-4 text-white">
+            <!-- Left -->
+            <div>
+                 <!-- Twitter -->
+                 <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee;" href="https://twitter.com/" target="_blank" role="button">
+                    <em class="fab fa-twitter"></em>
+                </a>
+
+                <!-- Google -->
+                <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39;" href="https://www.google.com/" target="_blank" role="button">
+                    <em class="fab fa-google"></em>
+                </a>
+
+                <!-- Instagram -->
+                <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac;" href="https://www.instagram.com/" target="_blank" role="button">
+                    <em class="fab fa-instagram"></em>
+                </a>
+
+                <!-- Linkedin -->
+                <a class="btn btn-primary btn-floating m-1" style="background-color: #0082ca;" href="https://co.linkedin.com/" target="_blank" role="button">
+                    <em class="fab fa-linkedin-in"></em>
+                </a>
+            </div>
+            <!-- Left -->
+
+            <!-- Right -->
+            <div class="me-5">
+                <span class="fs-3">Cohort 31</span>
+            </div>
+            <!-- Right -->
+        </section>
+        <!-- Section: Social media -->
+    </footer>
+    <!-- here finish page footer -->
+</body>
+
+</html>
